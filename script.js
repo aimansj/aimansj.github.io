@@ -42,7 +42,20 @@ $(document).ready(function(){
 
     });
 
+    $(".skill img").hover(function(){
+        
+        $(".skill img").css("opacity","0.4")
+        $(".skill img").css("filter","alpha(opacity=40)")
+        $(".skill span").css("display","block")
+
+    },function(){
+        $(".skill span").css("display","none")
+        $(".skill img").css("opacity","100")
+        $(".skill img").css("filter","alpha(opacity=100)")
+    });
+
     $(".skill img").click(function(){
+        $(".skill span").css("display","none")
         $("#slide").slideToggle("slow");
     })
 });
